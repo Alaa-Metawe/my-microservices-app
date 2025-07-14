@@ -1,9 +1,9 @@
 secret:
-  root_username: nasi
-  root_password: nasi1234
-  username: nasi
-  password: nasi1234
-  users_list: nasi
+  root_username: Alaa
+  root_password: Alaa1234
+  username: Alaa
+  password: Alaa1234
+  users_list: Alaa
   spec:
     affinity: # <--- You would add this block here
     nodeAffinity:
