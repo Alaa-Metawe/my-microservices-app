@@ -1,0 +1,21 @@
+service:
+  name: db
+  port: 5432
+  nodeport: 30003
+  spec:
+    affinity: # <--- You would add this block here
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: app
+            operator: In
+            values:
+            - postgres
+
+container:
+  image: postgres
+  env:
+    user: nasi
+    password: cnd2023
+    db: authdb
